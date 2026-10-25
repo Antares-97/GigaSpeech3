@@ -12,7 +12,7 @@
 ![Dialects](https://img.shields.io/badge/Arabic_Dialects-5-7C3AED?style=flat-square)
 ![Supervision](https://img.shields.io/badge/Supervision-Weak_Labels-EA580C?style=flat-square)
 
-**🇩🇿 Algerian · 🇪🇬 Egyptian · 🇮🇶 Iraqi · 🇸🇦 Saudi · 🇸🇾 Syrian**
+**Algerian · Egyptian · Iraqi · Saudi · Syrian**
 
 </div>
 
@@ -36,11 +36,11 @@ See the [dataset card](https://huggingface.co/datasets/Antares97/GigaSpeech3/blo
 
 | Code | Dialect |
 |:---:|:---|
-| DZA | 🇩🇿 Algerian Arabic |
-| EGY | 🇪🇬 Egyptian Arabic |
-| IRQ | 🇮🇶 Iraqi Arabic |
-| SAU | 🇸🇦 Saudi Arabic |
-| SYR | 🇸🇾 Syrian Arabic |
+| DZA | Algerian Arabic |
+| EGY | Egyptian Arabic |
+| IRQ | Iraqi Arabic |
+| SAU | Saudi Arabic |
+| SYR | Syrian Arabic |
 
 Each dialect is released as a weakly labeled training partition. The manual seed data and MSA data used in the manuscript are separate from these five partitions. Evaluation uses independently transcribed data from GigaSpeechBench and external Arabic corpora.
 
