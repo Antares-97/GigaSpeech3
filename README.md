@@ -108,12 +108,34 @@ The manuscript keeps manual, unlabeled, and evaluation channels disjoint. DZA, E
 
 ## 📊 Results
 
-**WER (%) on the five target Arabic dialects of GigaSpeechBench; lower is better.** These results are reported in the manuscript using a common Arabic text normalizer. AVG is the unweighted average over the five dialects.
+### 🏆 Comparison with Commercial APIs and Other ASR Systems
 
-| System | DZA | EGY | IRQ | SAU | SYR | AVG |
+**Table 6 from the manuscript: WER (%) on five GigaSpeechBench v3 Arabic dialects; lower is better.** All systems use the released test sets and a common Arabic text normalizer. AVG is the unweighted mean over the five dialects. Third-party systems follow the manuscript's order.
+
+| System | DZA | IRQ | SAU | SYR | EGY | AVG |
 |:---|---:|---:|---:|---:|---:|---:|
-| Dialect-specific Zipformers | 33.64 | 29.32 | 29.99 | 12.12 | 14.25 | **23.86** |
-| Multi-dialect Zipformer, predicted dialect ID | 36.78 | 32.80 | 28.85 | 12.81 | 16.33 | **25.51** |
+| Dolphin Base | 78.26 | 65.20 | 52.35 | 38.12 | 85.31 | 63.85 |
+| Dolphin Small | 72.44 | 62.05 | 50.91 | 30.03 | 74.70 | 58.03 |
+| GPT-4o Transcribe | 63.14 | 54.53 | 42.38 | 31.67 | 64.23 | 51.19 |
+| FunASR-Realtime | 66.30 | 53.44 | 37.67 | 24.24 | 63.33 | 49.00 |
+| Whisper Large v3 | 72.02 | 51.04 | 32.79 | 19.12 | 69.78 | 48.95 |
+| Deepgram Nova 3 | 57.90 | 47.54 | 25.02 | 30.61 | 52.77 | 42.77 |
+| NVIDIA NeMo | 62.66 | 43.22 | 29.28 | 20.13 | 54.83 | 42.02 |
+| Qwen3-ASR-1.7B | 63.43 | 41.27 | 25.85 | 18.50 | 59.23 | 41.66 |
+| Meta OmniASR 3B | 57.68 | 38.80 | 25.31 | 17.86 | 52.37 | 38.40 |
+| ElevenLabs Scribe v2 | 50.43 | 38.67 | 33.33 | 14.73 | 44.44 | 36.32 |
+| Qwen3-ASR-Flash | 57.18 | 33.21 | 19.21 | 14.41 | 48.78 | 34.56 |
+| Chirp 3 | 53.11 | 35.71 | 16.76 | 24.13 | 42.71 | 34.48 |
+| Azure | 51.22 | 34.61 | 20.09 | 17.74 | 47.65 | 34.26 |
+| Gemini 3.0 Flash | <em>44.22</em> | 36.55 | 20.10 | 14.40 | 41.22 | 31.30 |
+| Qwen3.5-Omni-Plus | 47.11 | <ins><em>28.54</em></ins> | <em>16.56</em> | <ins><em>13.76</em></ins> | <em>37.12</em> | <em>28.62</em> |
+| Dialect-Specific (ours) | <strong>33.64</strong> | 29.99 | <strong>12.12</strong> | 14.25 | <ins>29.32</ins> | <ins>23.86</ins> |
+| Multi-Dialect w/o LID (ours) | 36.78 | 28.85 | 12.81 | 16.33 | 32.80 | 25.51 |
+| Multi-Dialect w/ LID (ours) | <ins>35.29</ins> | <strong>27.84</strong> | <ins>12.62</ins> | <strong>13.18</strong> | <strong>29.16</strong> | <strong>23.62</strong> |
+
+*Italic*: best third-party result. **Bold**: best overall. <ins>Underlined</ins>: second-best overall.
+
+**LID conditions:** “w/o LID” uses automatically predicted dialect IDs; “w/ LID” uses ground-truth dialect IDs as a diagnostic. Dialect-specific SAU/SYR models include four rounds of noisy-student refinement.
 
 The final dialect-specific models improve over their labeling models on all five dialects. SAU/SYR use the NST r4 recognizers. The multi-dialect model additionally uses separately labeled MSA speech and achieves 10.83% WER on MSA, which is excluded from the averages above.
 
