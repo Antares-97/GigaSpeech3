@@ -4,7 +4,8 @@
 
 ### Scaling Multi-Dialect Arabic Speech Recognition with Weakly Labeled Data
 
-[![Hugging Face Dataset](https://img.shields.io/badge/🤗_Hugging_Face-Dataset-FFD21E?style=flat-square)](https://huggingface.co/datasets/Antares97/GigaSpeech3)
+[![Hugging Face Dataset](https://img.shields.io/badge/🤗_Hugging_Face-Dataset-FFD21E?style=flat-square)](https://huggingface.co/datasets/chenxie95/gigaspeech3)
+[![Online Demo](https://img.shields.io/badge/🎧_Online_Demo-Try_ASR-E11D48?style=flat-square)](https://chenxie95-gigaspeech3-arabic-asr.hf.space)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github)](https://github.com/Antares-97/GigaSpeech3)
 [![Benchmark](https://img.shields.io/badge/📊_GigaSpeechBench-Evaluation-2563EB?style=flat-square)](https://github.com/SpeechColab/GigaSpeechBench)
 
@@ -22,13 +23,14 @@ GigaSpeech 3 is a large-scale, weakly labeled Arabic speech corpus containing ap
 
 The accompanying manuscript reports approximately **39,000 hours** for its study corpus. Starting from only 51–63 hours of manual transcription per dialect, GigaSpeech 3 combines ASR-biased self-supervised learning, automatic transcription, data selection, and noisy-student refinement to build reusable audio–text supervision.
 
-## 📥 Download
+## 📥 Download and Demo
 
-- 🤗 **Training data:** [GigaSpeech 3 on Hugging Face](https://huggingface.co/datasets/Antares97/GigaSpeech3)
+- 🤗 **Training data:** [GigaSpeech 3 on Hugging Face](https://huggingface.co/datasets/chenxie95/gigaspeech3)
+- 🎧 **Online demo:** [Try GigaSpeech 3 Arabic ASR](https://chenxie95-gigaspeech3-arabic-asr.hf.space)
 - 🧪 **Evaluation data:** [GigaSpeechBench on Hugging Face](https://huggingface.co/datasets/speechcolab/GigaSpeechBench)
 - 🏆 **Evaluation toolkit and leaderboard:** [SpeechColab/GigaSpeechBench](https://github.com/SpeechColab/GigaSpeechBench)
 
-See the [dataset card](https://huggingface.co/datasets/Antares97/GigaSpeech3/blob/main/README.md) for file descriptions and terms of use. The current GitHub repository provides the project overview; training recipes and model checkpoint links will be added as they become available.
+See the [dataset card](https://huggingface.co/datasets/chenxie95/gigaspeech3/blob/main/README.md) for file descriptions and terms of use. The current GitHub repository provides the project overview; training recipes and model checkpoint links will be added as they become available.
 
 ## 🌍 Dataset
 
@@ -72,7 +74,7 @@ Read metadata without downloading the audio archives:
 ```python
 from datasets import load_dataset
 
-repo_id = "Antares97/GigaSpeech3"
+repo_id = "chenxie95/gigaspeech3"
 metadata = load_dataset(repo_id, "SAU", split="train", streaming=True)
 sample = next(iter(metadata))
 print(sample)
@@ -119,7 +121,7 @@ The manuscript also evaluates eight conditions from **MASC, Casablanca, and SADA
 
 ## 📜 Usage and License
 
-The corpus, derived transcripts, metadata, and model checkpoints described in the manuscript are intended **for scientific research and evaluation only**. This release does not grant commercial-use permission. Underlying recordings remain subject to their respective rights holders and source-platform terms; software recipes are licensed separately. Refer to the [dataset terms](https://huggingface.co/datasets/Antares97/GigaSpeech3/blob/main/README.md#terms-of-use).
+The corpus, derived transcripts, metadata, and model checkpoints described in the manuscript are intended **for scientific research and evaluation only**. This release does not grant commercial-use permission. Underlying recordings remain subject to their respective rights holders and source-platform terms; software recipes are licensed separately. Refer to the [dataset terms](https://huggingface.co/datasets/chenxie95/gigaspeech3/blob/main/README.md#terms-of-use).
 
 Transcripts are machine-generated and may contain errors. Country-level dialect labels are coarse, and web-source coverage, code-switching, and numerical expressions remain limitations. Use human-transcribed references for evaluation.
 
@@ -133,13 +135,13 @@ Please cite the accompanying manuscript if you find this work useful. Publicatio
   author = {Liu, Junzhe and Tu, Yujie and Wang, Peng and Wang, Haoran and Lin, Guodong and Liao, Leyan and Zhang, Chengquan and Yang, Yifan and Gao, Zhifu and Li, Xiangang and Cheng, Qinyuan and Qiu, Xipeng and Zhang, Weiqiang and Chen, Guoguo and Yu, Kai and Chen, Xie},
   year = {2026},
   howpublished = {Manuscript and dataset},
-  url = {https://huggingface.co/datasets/Antares97/GigaSpeech3}
+  url = {https://huggingface.co/datasets/chenxie95/gigaspeech3}
 }
 ```
 
 ## 💬 Contact
 
-For questions, contributions, or removal requests, open a [GitHub issue](https://github.com/Antares-97/GigaSpeech3/issues) or [dataset discussion](https://huggingface.co/datasets/Antares97/GigaSpeech3/discussions). Avoid posting sensitive personal information publicly.
+For questions, contributions, or removal requests, open a [GitHub issue](https://github.com/Antares-97/GigaSpeech3/issues) or [dataset discussion](https://huggingface.co/datasets/chenxie95/gigaspeech3/discussions). Avoid posting sensitive personal information publicly.
 
 ## 🔗 Related Projects
 
