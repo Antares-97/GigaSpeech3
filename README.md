@@ -110,7 +110,7 @@ The manuscript keeps manual, unlabeled, and evaluation channels disjoint. DZA, E
 
 ### 🏆 Comparison with Commercial APIs and Other ASR Systems
 
-**Table 6 from the manuscript: WER (%) on five GigaSpeechBench v3 Arabic dialects; lower is better.** All systems use the released test sets and a common Arabic text normalizer. AVG is the unweighted mean over the five dialects. Third-party systems follow the manuscript's order.
+**WER (%) on five GigaSpeechBench v3 Arabic dialects; lower is better.** Third-party system results are reproduced from the [GigaSpeechBench paper](https://arxiv.org/abs/2606.28884); results marked “ours” are from our GigaSpeech 3 experiments. All systems use the released test sets and a common Arabic text normalizer. AVG is the unweighted mean over the five dialects.
 
 | System | DZA | IRQ | SAU | SYR | EGY | AVG |
 |:---|---:|---:|---:|---:|---:|---:|
