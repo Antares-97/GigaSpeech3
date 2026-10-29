@@ -74,7 +74,7 @@ Read metadata without downloading the audio archives:
 ```python
 from datasets import load_dataset
 
-repo_id = "chenxie95/gigaspeech3"
+repo_id = "speechcolab/gigaspeech3"
 metadata = load_dataset(repo_id, "SAU", split="train", streaming=True)
 sample = next(iter(metadata))
 print(sample)
