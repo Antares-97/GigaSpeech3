@@ -26,6 +26,7 @@ The accompanying manuscript reports approximately **39,000 hours** for its study
 
 ## 📥 Download and Demo
 
+- 📄 **Paper:** [arXiv](https://arxiv.org/abs/2611.02476) · [PDF](https://arxiv.org/pdf/2611.02476)
 - 🤗 **Training data:** [GigaSpeech 3 on Hugging Face](https://huggingface.co/datasets/speechcolab/gigaspeech3)
 - 🎧 **Online demo:** [Try GigaSpeech 3 Arabic ASR](https://chenxie95-gigaspeech3-arabic-asr.hf.space)
 - 🧪 **Evaluation data:** [GigaSpeechBench on Hugging Face](https://huggingface.co/datasets/speechcolab/GigaSpeechBench)
