@@ -5,6 +5,7 @@
 ### Scaling Multi-Dialect Arabic Speech Recognition with Weakly Labeled Data
 
 [![Hugging Face Dataset](https://img.shields.io/badge/🤗_Hugging_Face-Dataset-FFD21E?style=flat-square)](https://huggingface.co/datasets/speechcolab/gigaspeech3)
+[![arXiv](https://img.shields.io/badge/arXiv-2611.02476-b31b1b?style=flat-square&logo=arxiv)](https://arxiv.org/abs/2611.02476)
 [![Online Demo](https://img.shields.io/badge/🎧_Online_Demo-Try_ASR-E11D48?style=flat-square)](https://chenxie95-gigaspeech3-arabic-asr.hf.space)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github)](https://github.com/Antares-97/GigaSpeech3)
 [![Benchmark](https://img.shields.io/badge/📊_GigaSpeechBench-Evaluation-2563EB?style=flat-square)](https://github.com/SpeechColab/GigaSpeechBench)
@@ -149,15 +150,17 @@ Transcripts are machine-generated and may contain errors. Country-level dialect 
 
 ## 📝 Citation
 
-Please cite the accompanying manuscript if you find this work useful. Publication details will be updated when available.
+Please cite our [paper](https://arxiv.org/abs/2611.02476) if you find this work useful.
 
 ```bibtex
 @misc{liu2026gigaspeech3,
   title = {GigaSpeech 3: Scaling Multi-Dialect Arabic Speech Recognition with Weakly Labeled Data},
-  author = {Liu, Junzhe and Tu, Yujie and Wang, Peng and Wang, Haoran and Lin, Guodong and Liao, Leyan and Zhang, Chengquan and Yang, Yifan and Gao, Zhifu and Li, Xiangang and Cheng, Qinyuan and Qiu, Xipeng and Zhang, Weiqiang and Chen, Guoguo and Yu, Kai and Chen, Xie},
+  author = {Liu, Junzhe and Tu, Yujie and Yang, Yifan and Wang, Peng and Wang, Haoran and Lin, Guodong and Liao, Leyan and Zhang, Chengquan and Gao, Zhifu and Li, Xiangang and Cheng, Qinyuan and Qiu, Xipeng and Zhang, Weiqiang and Chen, Guoguo and Yu, Kai and Chen, Xie},
   year = {2026},
-  howpublished = {Manuscript and dataset},
-  url = {https://huggingface.co/datasets/speechcolab/gigaspeech3}
+  eprint = {2611.02476},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+  url = {https://arxiv.org/abs/2611.02476}
 }
 ```
 
