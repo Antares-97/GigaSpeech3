@@ -55,13 +55,16 @@ The initial code release focuses on dialect-specific Zipformer training and deco
 
 ### 🗣️ Dialects
 
-| Code | Dialect |
-|:---:|:---|
-| DZA | Algerian Arabic |
-| EGY | Egyptian Arabic |
-| IRQ | Iraqi Arabic |
-| SAU | Saudi Arabic |
-| SYR | Syrian Arabic |
+| Code | Dialect | Training hours |
+|:---:|:---|---:|
+| DZA | Algerian Arabic | 11,461 |
+| EGY | Egyptian Arabic | 8,533 |
+| IRQ | Iraqi Arabic | 10,162 |
+| SAU | Saudi Arabic | 4,512 |
+| SYR | Syrian Arabic | 4,361 |
+| **Total** | **Five dialects** | **39,028** |
+
+*Training durations are reported in the [GigaSpeech 3 paper](https://arxiv.org/abs/2611.02476) and rounded to whole hours; the total is reported separately in the paper.*
 
 Each dialect is released as a weakly labeled training partition. The manual seed data and MSA data used in the manuscript are separate from these five partitions. Evaluation uses independently transcribed data from GigaSpeechBench and external Arabic corpora.
 
@@ -80,7 +83,18 @@ GigaSpeech3/
 └── SYR/
 ```
 
-All dialect directories use the same layout. Metadata fields are `id`, `duration` (seconds), `text` (weak transcript), `dialect`, `shard` (tar filename), and `member` (audio path inside the tar).
+All dialect directories use the same layout. Each Parquet row describes one audio segment:
+
+| Field | Type | Description |
+|:---|:---|:---|
+| `id` | string | Segment identifier; retain it when preparing manifests and decoding outputs. |
+| `duration` | float64 | Segment duration in **seconds**. |
+| `text` | string | Automatically generated, weakly supervised transcript. |
+| `dialect` | string | One of `DZA`, `EGY`, `IRQ`, `SAU`, or `SYR`. |
+| `shard` | string | Audio tar filename, for example `001.tar`. |
+| `member` | string | Exact path of the segment audio inside its tar archive. |
+
+Locate an audio segment using `<dialect>/audio/<shard>`, then read the archive member named by `member`. Each audio file is already segmented; a Lhotse cut for that file starts at 0 seconds. The six-field index contains weak training transcripts, not human-transcribed development/test references or confidence scores.
 
 ### 🚀 Quick Start
 
