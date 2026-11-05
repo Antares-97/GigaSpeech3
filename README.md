@@ -42,6 +42,7 @@ The release recipe follows four steps for each dialect (`DZA`, `EGY`, `IRQ`, `SA
 |:---|:---|
 | GigaSpeech 3 | [Paper](https://arxiv.org/abs/2611.02476) · [Training data](https://huggingface.co/datasets/speechcolab/gigaspeech3) · [Online demo](https://chenxie95-gigaspeech3-arabic-asr.hf.space) |
 | Training framework | [VietASR code](https://github.com/zzasdf/VietASR) · [VietASR paper](https://www.isca-archive.org/interspeech_2025/zhuo25_interspeech.html) · [icefall](https://github.com/k2-fsa/icefall) · [Lhotse](https://github.com/lhotse-speech/lhotse) |
+| Qwen3-ASR-1.7B | [Official base checkpoint](https://huggingface.co/Qwen/Qwen3-ASR-1.7B) · [Official code](https://github.com/QwenLM/Qwen3-ASR) · [Technical report](https://arxiv.org/abs/2601.21337) |
 | Evaluation | [GigaSpeechBench data](https://huggingface.co/datasets/speechcolab/GigaSpeechBench) · [Evaluation code](https://github.com/SpeechColab/GigaSpeechBench) · [Paper](https://arxiv.org/abs/2606.28884) |
 | Noisy-student refinement (NST) | [GigaSpeech 2 code](https://github.com/SpeechColab/GigaSpeech2) · [Pipeline](https://github.com/SpeechColab/GigaSpeech2/tree/main/pipeline) · [Data](https://huggingface.co/datasets/speechcolab/gigaspeech2) · [Paper](https://aclanthology.org/2025.acl-long.135/) |
 
