@@ -36,7 +36,7 @@ See the [dataset card](https://huggingface.co/datasets/speechcolab/gigaspeech3/b
 
 ## 🛠️ Training and Evaluation Resources
 
-The release recipe follows four steps for each dialect (`DZA`, `EGY`, `IRQ`, `SAU`, or `SYR`): **HF training data → Lhotse manifests and Fbank → dialect-specific BPE → Zipformer training → decoding**.
+The release recipe follows four steps for each dialect (`DZA`, `EGY`, `IRQ`, `SAU`, or `SYR`): **HF training data → Lhotse manifests and Fbank → dialect-specific SentencePiece tokenizer → Zipformer training → decoding**.
 
 | Resource | Links |
 |:---|:---|
