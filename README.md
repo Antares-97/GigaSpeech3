@@ -42,10 +42,10 @@ The release recipe follows four steps for each dialect (`DZA`, `EGY`, `IRQ`, `SA
 |:---|:---|
 | GigaSpeech 3 | [Paper](https://arxiv.org/abs/2611.02476) · [Training data](https://huggingface.co/datasets/speechcolab/gigaspeech3) · [Online demo](https://chenxie95-gigaspeech3-arabic-asr.hf.space) |
 | Training framework | [VietASR code](https://github.com/zzasdf/VietASR) · [VietASR paper](https://www.isca-archive.org/interspeech_2025/zhuo25_interspeech.html) · [icefall](https://github.com/k2-fsa/icefall) · [Lhotse](https://github.com/lhotse-speech/lhotse) |
-| Evaluation | [GigaSpeechBench data](https://huggingface.co/datasets/speechcolab/GigaSpeechBench) · [Evaluation code](https://github.com/SpeechColab/GigaSpeechBench) · [Arabic dialect normalizers](https://github.com/SpeechColab/GigaSpeechBench/tree/main/text_norm) · [Paper](https://arxiv.org/abs/2606.28884) |
+| Evaluation | [GigaSpeechBench data](https://huggingface.co/datasets/speechcolab/GigaSpeechBench) · [Evaluation code](https://github.com/SpeechColab/GigaSpeechBench) · [Paper](https://arxiv.org/abs/2606.28884) |
 | Noisy-student refinement (NST) | [GigaSpeech 2 code](https://github.com/SpeechColab/GigaSpeech2) · [Pipeline](https://github.com/SpeechColab/GigaSpeech2/tree/main/pipeline) · [Data](https://huggingface.co/datasets/speechcolab/gigaspeech2) · [Paper](https://aclanthology.org/2025.acl-long.135/) |
 
-**Evaluation inputs:** users prepare separate human-transcribed development and test manifests, preserving the benchmark's segment IDs, boundaries, and references. Use a development set that is independent of the test set; do not use benchmark test data for model selection. Apply the GigaSpeechBench normalizer to references and decoded hypotheses for WER, and record the benchmark revision and scoring settings.
+**Evaluation inputs:** users prepare separate human-transcribed development and test manifests, preserving the benchmark's segment IDs, boundaries, and references. Use a development set that is independent of the test set; do not use benchmark test data for model selection. Record the text-normalization version and scoring settings used for WER evaluation.
 
 **NST scope:** the released SAU/SYR partitions already contain the final r4-filtered weak labels. GigaSpeech 2 provides the upstream refinement method and implementation; its dataset is separate from our Arabic data and does not contain our intermediate NST rounds. Training on the released final partitions does not rerun the four-round construction process.
 
