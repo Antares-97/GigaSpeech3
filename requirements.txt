@@ -1,0 +1,9 @@
+# Install AFTER the matched torch/torchaudio/k2/kaldifeat stack.
+# The icefall package is vendored under asr/; no external checkout is needed.
+# This is a dependency list, not a validated version lockfile.
+-r requirements-data.txt
+numpy
+tqdm
+tensorboard
+kaldialign
+packaging

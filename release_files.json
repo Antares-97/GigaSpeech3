@@ -1,0 +1,278 @@
+{
+  "description": "Static local import closure; not an installation lockfile or a secret scan.",
+  "core_pipeline": [
+    {
+      "path": "asr/datamodule.py",
+      "sha256": "b8c38b61dab93bd24ca02c98529fbbac14ad517a9aa6efe5d9a3812d9d6e7b84"
+    },
+    {
+      "path": "asr/decode.py",
+      "sha256": "2e3ae2fa064ff616414a2e513c429d287996131ef59cebbc2a331abe89042530"
+    },
+    {
+      "path": "asr/dialect_tokens.py",
+      "sha256": "421a066c445eadf9577f8f714867956cd8b6bff0170bc67ec8f852e16b5ae23d"
+    },
+    {
+      "path": "asr/finetune.py",
+      "sha256": "d6c1bd6c402cd14c960dad1180d3d2f026e08926a7c6e075f1d1fec7503ae5e1"
+    },
+    {
+      "path": "asr/icefall/__init__.py",
+      "sha256": "7da4b3c496a3d8a5d9f3bcb7dfe1958340fc8237b03eba5d6eeba94501ea8444"
+    },
+    {
+      "path": "asr/icefall/byte_utils.py",
+      "sha256": "21c9c52130f1bfb4f2e5dda1fe239589af2660d778522db8f97a5d681a50c0e2"
+    },
+    {
+      "path": "asr/icefall/checkpoint.py",
+      "sha256": "b3303126eb26900e27f9b797719a5120fd459ddd2f4372c987c68a24f03a8141"
+    },
+    {
+      "path": "asr/icefall/context_graph.py",
+      "sha256": "9a694cd56e3d804090f75f78e7f2f02078162e6fd91237de0f1316059a774c37"
+    },
+    {
+      "path": "asr/icefall/decode.py",
+      "sha256": "e9af7585836686e02710bb8c937f52cc423a1b1a6eee86dfee845c02c4c35f99"
+    },
+    {
+      "path": "asr/icefall/diagnostics.py",
+      "sha256": "6ab1fe00dd9eff357ff430df75967a48de4e8affc6839f9aeff99cccdef7e178"
+    },
+    {
+      "path": "asr/icefall/dist.py",
+      "sha256": "6a162acd9ebc13e35a9530b2c01f069220418d2d3651eb96a7c6bc976b12bbdf"
+    },
+    {
+      "path": "asr/icefall/env.py",
+      "sha256": "0dd3b1193446dd3de824a745ddb3f85036d3e539fbefcb0569e7fa423d6b9da3"
+    },
+    {
+      "path": "asr/icefall/err.py",
+      "sha256": "0310d8bea2d14eed9a3d2fc785ea1e749a520ec79fe84fae543326e51b7d0118"
+    },
+    {
+      "path": "asr/icefall/hooks.py",
+      "sha256": "615cc4b135d250cb0f328048d4c5c2d4019b9bb80ae89ee51a314e5171c7fbfd"
+    },
+    {
+      "path": "asr/icefall/lexicon.py",
+      "sha256": "a44f4577ab00aa8cdbccc873eca2f2a4b4518c3d9ab687ff381e8e454a5cc507"
+    },
+    {
+      "path": "asr/icefall/lm_wrapper.py",
+      "sha256": "b83053ca20f0850990a15e86b809f278a94ed3589a47f85eac03437426040f06"
+    },
+    {
+      "path": "asr/icefall/ngram_lm.py",
+      "sha256": "e943c2d605bab6c39bfc3033392e8b84e14088eaed92468d6e735c1e49893d8a"
+    },
+    {
+      "path": "asr/icefall/rnn_lm/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "asr/icefall/rnn_lm/model.py",
+      "sha256": "01cf2167957dba5d2f0ba0b6d3705ffe64f4447858647011625604d168e51ca5"
+    },
+    {
+      "path": "asr/icefall/transformer_lm/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "asr/icefall/transformer_lm/attention.py",
+      "sha256": "94fe04858e011ca91bc73a8b9d38c6b48560a508eba8f7b860a99241c455ad24"
+    },
+    {
+      "path": "asr/icefall/transformer_lm/encoder.py",
+      "sha256": "109cebc39d36d6256f98fb0c7ff07a83aff1a5bddba8dd6dda399a8b8e39993c"
+    },
+    {
+      "path": "asr/icefall/transformer_lm/model.py",
+      "sha256": "ee4f4960b6104d2f3d7405a1cd8f495531bc3c023f6cbece4d7895462255a582"
+    },
+    {
+      "path": "asr/icefall/transformer_lm/scaling.py",
+      "sha256": "57fb71f4f29fb3321a2eaa72642fcfb0caab95c810bc68337f6bbbfceb766e1d"
+    },
+    {
+      "path": "asr/icefall/utils.py",
+      "sha256": "2a36d11c79bf7bfd0028c5306f572d2a53fffd5c6efd19949c1d3480ebfb6a71"
+    },
+    {
+      "path": "asr/optim.py",
+      "sha256": "d8ef76b1053a4bfaae2ba9679a6d37dd94936cd979826120d3a9dc23a4745003"
+    },
+    {
+      "path": "asr/pipeline_decode.py",
+      "sha256": "4fda41eb8928a2aafa1212937012a6febe2c277cf3fd5f47f795863aaf2db2a5"
+    },
+    {
+      "path": "asr/recipe_textnorm.py",
+      "sha256": "1fe73726b9c2f604cd3ec3beb7487253b0062d7a6634fc15967c11e64e3303f7"
+    },
+    {
+      "path": "asr/scaling.py",
+      "sha256": "c15784238410a9ec9f72414dfc3be18d854e6c5e8f9b9e7d2e9f9c81bd179255"
+    },
+    {
+      "path": "asr/textnorm/__init__.py",
+      "sha256": "bd66aefbfaa9005946afb4fc73c56ba50c3d77976d53d8bbbc4660115aa522ab"
+    },
+    {
+      "path": "asr/textnorm/_common.py",
+      "sha256": "5a65eb3dc3764c236a48c7fa63910095f1e76fc46f29ceb8923ab332e0310d3a"
+    },
+    {
+      "path": "asr/textnorm/DZA.py",
+      "sha256": "fb151eea0f548dd225592dcd63d4d3ab092483bcfafafcca063cf728e59e96b4"
+    },
+    {
+      "path": "asr/textnorm/EGY.py",
+      "sha256": "4ed8bfa57f6a39def5e636b0ade5364330844734df5f9b320f99589f9d2752ff"
+    },
+    {
+      "path": "asr/textnorm/IRQ.py",
+      "sha256": "c25ca79d3386e257952b76535444647fa426d8b3e18df8fc2bbfb20ee5e3f7a8"
+    },
+    {
+      "path": "asr/textnorm/SAU.py",
+      "sha256": "4ec5600a307b57550b734df592fbff1bedd7457fb18c53b808f8e461dcaec887"
+    },
+    {
+      "path": "asr/textnorm/SYR.py",
+      "sha256": "710708dd7c152494f781b7c93404b8f17f8a6de3740de03b232cf8ac43090dbd"
+    },
+    {
+      "path": "asr/train.py",
+      "sha256": "6fa5430ba71c9ddc40e9c25569f6051edccb80859d7e8093ba906f54977497ed"
+    },
+    {
+      "path": "asr/utils.py",
+      "sha256": "71f529f3e936187416a1c3b4d2e3a31735aa160740609652659077df828650bb"
+    },
+    {
+      "path": "asr/zipformer/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "asr/zipformer/attention_decoder.py",
+      "sha256": "739afe32cbc872bbeeaae1b84e83ef95695349e75dc18b265e19a3433f79e99b"
+    },
+    {
+      "path": "asr/zipformer/beam_search.py",
+      "sha256": "17475157dd296e8fbc79338ccb5bce662200b8ebb7be0f4632db6698f3855697"
+    },
+    {
+      "path": "asr/zipformer/dataset.py",
+      "sha256": "3a362bf3b593318e9c911153d0fc2aad1587153fc68fa5c12c1e9e0b3d5ab271"
+    },
+    {
+      "path": "asr/zipformer/decoder.py",
+      "sha256": "92ee967e4b927a3ef2e4cc2d900756609a191f859c956a400cfe642d6ef0cf52"
+    },
+    {
+      "path": "asr/zipformer/encoder_interface.py",
+      "sha256": "fc70f530c33e2489435ff2cb4bb0dad8b9d6f58a248c425cbd6100c62f628569"
+    },
+    {
+      "path": "asr/zipformer/hubert_ce.py",
+      "sha256": "4975a06bd5a6ab008076cf3b754b6f43dacae4efaa3a7196407ea8d667e23a11"
+    },
+    {
+      "path": "asr/zipformer/joiner.py",
+      "sha256": "2d924a5a00f7a2bb2340c1a991f8a71037bcfbc7e98cbabe26527ffa7d4030d4"
+    },
+    {
+      "path": "asr/zipformer/label_smoothing.py",
+      "sha256": "32234a83a21a2444d2f789990e2a99d4d3e70f561c5de0184182d84658ac7867"
+    },
+    {
+      "path": "asr/zipformer/model.py",
+      "sha256": "0d5d52f39060c36efbf448736df0704123851bb4fc297f9a1c83dd38ce507bdb"
+    },
+    {
+      "path": "asr/zipformer/optim.py",
+      "sha256": "c7b0349acfb999a1f9f859a1afd6062c243d2ed974b41597526adf194c907a49"
+    },
+    {
+      "path": "asr/zipformer/scaling.py",
+      "sha256": "bd01579ad948abcb4f3cb049c99461bebdb36f9a1f7fa78cdff6babcca681094"
+    },
+    {
+      "path": "asr/zipformer/subsampling.py",
+      "sha256": "e04de281f136560e2d44b5f7df174d0364b5feb2c22608173b60de02630c2a66"
+    },
+    {
+      "path": "asr/zipformer/tri_scheduler.py",
+      "sha256": "fb64c0be90baf01b07f13b38a81d4ca3ab065e79ac4fe36ad5fbe8b47e743618"
+    },
+    {
+      "path": "asr/zipformer/utils.py",
+      "sha256": "3e94b4af145e5839bd8b68f533c606173eb9c1487bc5aef67624142d5b6b9e4c"
+    },
+    {
+      "path": "asr/zipformer/zipformer.py",
+      "sha256": "2bf124ff2a1d11471515da9fbefc519554b17fa6c1aac3aa2c8b1db899b500c6"
+    },
+    {
+      "path": "scripts/benchmark.py",
+      "sha256": "35e0119d624b44cdedbdfb2295d7d55cdd05f4b5819825ab1f41437b227388eb"
+    },
+    {
+      "path": "scripts/build_tokenizer.py",
+      "sha256": "f4af424d5322184aaeaa75ca22d0677313d050e73a23c9041df545eb9224eeb6"
+    },
+    {
+      "path": "scripts/common.py",
+      "sha256": "61e47fed5d6715be9841c9700ff1ac9e4eb392a84489fc7498a9a9ef5b50f46d"
+    },
+    {
+      "path": "scripts/decode.py",
+      "sha256": "7bfa4fa88c6136c75d4cc2e77b49e0796fda95efe10f3dddde0122bfc825a8ca"
+    },
+    {
+      "path": "scripts/features.py",
+      "sha256": "ce3d996ac35e4b1b3db72cf83d0531453d452780f55272a624cf0be72bca000c"
+    },
+    {
+      "path": "scripts/inventory.py",
+      "sha256": "3fd7c6cd3f331800e0600d67e10b6939a8793c60521d98d06c7cc3e781876033"
+    },
+    {
+      "path": "scripts/prepare.py",
+      "sha256": "d20e50c4d185012d6e9706fd7e3a9e330231dac891665c4f06e8bc204cad7682"
+    },
+    {
+      "path": "scripts/run.py",
+      "sha256": "da3e14673ace0baa9d571c14cd706701c7854590064d9e9780135a861bb574dc"
+    },
+    {
+      "path": "scripts/score.py",
+      "sha256": "2244ac4ab7c64b33f01dbb65d86391a6ca1d0405a3a69a149a0a9552dc73226d"
+    },
+    {
+      "path": "scripts/train.py",
+      "sha256": "adf588960a07a06f45f5f840492e9d5145fe849c29ef380316768ef87b9dc6d4"
+    }
+  ],
+  "documentation_and_config": [
+    "README.md",
+    "INSTALL.md",
+    "NOTICE.md",
+    "requirements.txt",
+    "requirements-data.txt",
+    "configs/dialect-specific.example.json",
+    "configs/sau.example.json"
+  ],
+  "excluded": [
+    "model weights",
+    "audio",
+    "Fbank caches",
+    "experiment logs",
+    "GigaSpeechBench checkout",
+    "gigaspeech2_method API clients"
+  ]
+}

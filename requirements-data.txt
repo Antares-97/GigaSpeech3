@@ -1,0 +1,10 @@
+# Data preparation and dialect-specific tokenizer dependencies.
+# Install torch/torchaudio, k2 and kaldifeat separately using compatible builds.
+huggingface_hub
+pyarrow
+lhotse
+soundfile
+lilcom
+sentencepiece
+protobuf
+regex

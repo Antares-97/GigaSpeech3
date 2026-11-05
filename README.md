@@ -32,7 +32,7 @@ The accompanying manuscript reports approximately **39,000 hours** for its study
 - 🧪 **Evaluation data:** [GigaSpeechBench on Hugging Face](https://huggingface.co/datasets/speechcolab/GigaSpeechBench)
 - 🏆 **Evaluation toolkit and leaderboard:** [SpeechColab/GigaSpeechBench](https://github.com/SpeechColab/GigaSpeechBench)
 
-See the [dataset card](https://huggingface.co/datasets/speechcolab/gigaspeech3/blob/main/README.md) for file descriptions and terms of use. The dialect-specific training recipe is being prepared for release. Model checkpoint downloads will be listed here when available; the online demo can already be used for inference.
+See the [dataset card](https://huggingface.co/datasets/speechcolab/gigaspeech3/blob/main/README.md) for file descriptions and terms of use. The dialect-specific training and decoding recipe is available in this repository. Model checkpoint downloads will be listed here when available; the online demo can already be used for inference.
 
 ## 🛠️ Training and Evaluation Resources
 
@@ -99,34 +99,54 @@ Locate an audio segment using `<dialect>/audio/<shard>`, then read the archive m
 
 ### 🚀 Quick Start
 
+Use **Linux/WSL2 with an NVIDIA GPU** for training. Install compatible **PyTorch + torchaudio**, **k2**, and **kaldifeat** first, following [PyTorch](https://pytorch.org/get-started/locally/), [k2](https://k2-fsa.github.io/k2/installation/from_wheels.html), and [kaldifeat](https://github.com/csukuangfj/kaldifeat) instructions. The icefall utilities are included under `asr/icefall/`.
+
+#### 1. Install
+
 ```bash
-pip install -U datasets huggingface_hub
+git clone https://github.com/Antares-97/GigaSpeech3.git
+cd GigaSpeech3
+python -m pip install -r requirements.txt
 ```
 
-Read metadata without downloading the audio archives:
+See [INSTALL.md](INSTALL.md) for environment setup and checks. The requirements include data/tokenizer dependencies (`huggingface_hub`, `pyarrow`, `lhotse`, `soundfile`, `lilcom`, `sentencepiece`, `protobuf`, `regex`) and training utilities. Keep torch, torchaudio, k2 and kaldifeat builds compatible.
 
-```python
-from datasets import load_dataset
+#### 2. Prepare training data and tokenizer
 
-repo_id = "speechcolab/gigaspeech3"
-metadata = load_dataset(repo_id, "SAU", split="train", streaming=True)
-sample = next(iter(metadata))
-print(sample)
+```bash
+python scripts/run.py --dialect DZA --stage prepare --dry-run
+python scripts/run.py --dialect DZA --stage prepare
+python scripts/run.py --dialect DZA --stage features
+python scripts/run.py --dialect DZA --stage tokenizer
 ```
 
-Download the archive containing the selected segment:
+These stages process **training data only** and write Lhotse cuts, Fbank and `tokenizer.model` under `data/DZA/`. Replace `DZA` with `EGY`, `IRQ`, `SAU`, or `SYR` to reuse the recipe. The example config processes **one audio shard**; set `max_shards` to `0` in your own config for the complete dialect. The tokenizer uses training transcripts only.
 
-```python
-from huggingface_hub import hf_hub_download
+#### 3. Train and decode
 
-archive_path = hf_hub_download(
-    repo_id=repo_id,
-    repo_type="dataset",
-    filename=f"{sample['dialect']}/audio/{sample['shard']}",
-)
+Prepare independent human-transcribed dev/test data yourself. Training requires `data/DZA/fbank/gigaspeech3_dza_cuts_dev.jsonl.gz` with precomputed 80-bin Fbank features; it fails if dev is absent. See [Development data](INSTALL.md#development-data) for the reference JSONL schema and optional conversion commands.
+
+```bash
+python scripts/train.py \
+  --dialect DZA \
+  --manifest-dir data/DZA/fbank \
+  --exp-dir exp/DZA/run1 \
+  --tokenizer-model data/DZA/lang/tokenizer.model \
+  --cuts-name gigaspeech3_dza_cuts_train \
+  --world-size 1 --num-epochs 1 --max-duration 100 --use-fp16 true \
+  --use-wandb false
+
+python scripts/decode.py \
+  --dialect DZA \
+  --manifest-dir data/DZA/fbank \
+  --exp-dir exp/DZA/run1 \
+  --tokenizer-model data/DZA/lang/tokenizer.model \
+  --cuts-name eval --cuts-path /path/to/eval_cuts.jsonl.gz \
+  --epoch 1 --avg 1 --decoding-method greedy_search \
+  --keep-eval-cuts
 ```
 
-The audio is located at `sample["member"]` inside this archive. Metadata loading does not automatically download or decode audio; individual shards can be several gigabytes.
+The one-GPU, one-epoch settings above are for a **smoke run**, not the paper's final training configuration. Training and decoding are independent; use `--help` for their full argument sets. Decoding exports `hyp-*.jsonl` with raw and normalized text under `exp/DZA/run1/decode/`. WER evaluation is separate.
 
 ## 🔄 Corpus Construction
 
